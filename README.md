@@ -27,6 +27,8 @@ Then use **alimask(text, options)** API.
 alimask('王小为(小为) 888888');
 
 alimask('王小为(小为) 888888', { color: '#f6dcd7' });
+
+alimask('小泥巴(小美) 888888', { alpha: 0.5 });
 ```
 
 
@@ -37,7 +39,7 @@ The unique API is: **alimask(text, options)**.
  - **text** (String): required, the text in the watermark image. 
  - **options** (Object): optional, the options of watermark, with keys below:
    - **width** (Number): default is `250`.
-   - **height** (Number): default is `80`
+   - **height** (Number): default is `80`.
    - **color** (String): the text color, default is `#ebebeb`.
    - **alpha** (Float): the text alpha(0 ~ 1), default is `0.8`.
    - **font** (String): the text font style, default is `10px Arial`.
