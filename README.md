@@ -26,7 +26,7 @@ Then use **alimask(text, options)** API.
 ```js
 alimask('王小为(小为) 888888');
 
-alimask('王小为(小为) 888888', { color: 'green' });
+alimask('王小为(小为) 888888', { color: '#f6dcd7' });
 ```
 
 
