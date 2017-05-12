@@ -12,8 +12,7 @@
     padding: 10px 20px;
   }
   pre {
-    /*background-color: #f6dcd7;*/
-    border: 1px solid #f6dcd7;
+    background-color: #f6dcd7;
     border-radius: 3px;
     padding: 10px 15px;
     white-space: pre-wrap;
@@ -65,12 +64,6 @@ var base64 = alimask('王小为(小为) 888888');
   </p>
   <script type="text/javascript" src="dist/alimask.min.js"></script>
   <script type="text/javascript">
-    document.body.style.background = 'url(' + alimask('王小为(小为) 888888') + ')';
-    var pres = document.querySelectorAll('pre');
-    var prebg = alimask('小为（hustcc）666666', {color: '#f6dcd7'});
-    for (var i = pres.length - 1; i >= 0; i--) {
-      pres[i].style.background = 'url(' + prebg + ')';
-    }
     document.body.style.background = 'url(' + alimask('王小为(小为) 888888') + ')';
   </script>
 </body>
