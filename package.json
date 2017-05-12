@@ -1,0 +1,44 @@
+{
+  "name": "alimask",
+  "officialName": "alimask",
+  "version": "1.0.0",
+  "summary": "alimask is a simple library to generate water mask used in alibaba / antfin.",
+  "description": "alibaba water mask background.",
+  "author": {
+    "name": "hustcc",
+    "url": "https://github.com/hustcc"
+  },
+  "license": "MIT",
+  "keywords": [
+    "alimask",
+    "canvas",
+    "javascript",
+    "mask",
+    "water mask",
+    "background",
+    "antfin",
+    "alibaba"
+  ],
+  "main": "dist/alimask.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hustcc/alimask"
+  },
+  "bugs": {
+    "url": "https://github.com/hustcc/alimask/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jshint": "^2.9.4",
+    "gulp-uglify": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-inject-version": "^1.0.1"
+  },
+  "scripts": {
+    "lint": "jshint src/alimask.js",
+    "test": "npm run lint && npm run build",
+    "build": "gulp build"
+  },
+  "dependencies": {
+  }
+}

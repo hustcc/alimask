@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>**alimask** is a simple library to generate water mask with canvas used in alibaba / antfin.</title>
+  <meta name="keywords" content="alimask" />
+  <meta name="description" content="**alimask** is a simple library to generate water mask with canvas used in alibaba / antfin." />
+  <style type="text/css">
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  pre {
+    background-color: #f6dcd7;
+    padding: 10px 15px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  pre.strong {
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <h1> alimask </h1>
+  <p>
+    Project <a href="https://github.com/hustcc/alimask">alimask</a> is a simple library to generate water mask with canvas used in alibaba / antfin. 用于生成阿里内部网站水印的 JavaScript 库。
+  </p>
+
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- sorry for ad -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7292810486004926"
+       data-ad-slot="7806394673"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <h2> Install </h2>
+  <pre class="strong">
+npm install alimask </pre>
+  <p> Then import it. </p>
+  <pre>
+// import library use script tag.
+&lt;script type="text/javascript" src="dist/alimask.min.js"&gt;&lt;/script&gt;
+
+// or
+var alimask = require('alimask');
+
+// or
+import alimask from 'alimask';
+</pre>
+
+  <h3>Usage</h3>
+  <pre>
+var base64 = alimask('王小为(小为) 888888', {});
+  </pre>
+  <hr />
+
+  <p>
+    The code of alimask hosted on Github, click <a href="https://github.com/hustcc/alimask">here</a>. Welcome to issue or pull request.
+  </p>
+  <script type="text/javascript" src="dist/alimask.min.js"></script>
+  <script type="text/javascript">
+    document.body.style.background = 'url(' + alimask('王小为(小为) 888888') + ')';
+  </script>
+</body>
+</html>
