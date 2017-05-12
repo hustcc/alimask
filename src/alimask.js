@@ -20,7 +20,7 @@
       width: 250,
       height: 80,
       color: '#ebebeb',
-      fillColor: 'white',
+      alpha: 0.8,
       font: '10px Arial'
     }, options);
     return options;
@@ -34,7 +34,7 @@
         width: 250,
         height: 80,
         color: '#ebebeb',
-        fillColor: 'white',
+        alpha: 0.8,
         font: '10px Arial'
       }
    *
@@ -54,10 +54,12 @@
     canvas.height = height;
 
     ctx.clearRect(0, 0, width, height); // clear the canvas
+    ctx.globalAlpha = 0; // backgroud is alpha
 
-    ctx.fillStyle = options.fillColor;
+    // ctx.fillStyle = 'white'; // no need because of alipha = 0;
     ctx.fillRect(0, 0, width, height);
 
+    ctx.globalAlpha= options.alpha; // text alpha
     ctx.fillStyle = options.color;
     ctx.font = options.font;
 
