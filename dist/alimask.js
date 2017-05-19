@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2017 hustcc
  * License: MIT
- * Version: v1.0.1
+ * Version: v1.0.2
  * GitHub: https://github.com/hustcc/alimask
 **/
 
@@ -15,16 +15,18 @@
     root.alimask = factory(root);
 }(typeof window !== 'undefined' ? window : this, function () {
   var canvas, ctx;
+
+  // merge the default value
   function mergeOptions(options) {
-    options = Object.assign({
+    return Object.assign({
       width: 250,
       height: 80,
       color: '#ebebeb',
       alpha: 0.8,
       font: '10px Arial'
     }, options);
-    return options;
   }
+
   /**
    *  alimask( text, options ) -> string
    *  - text (String): this text on water mask.
@@ -63,9 +65,13 @@
     ctx.fillStyle = options.color;
     ctx.font = options.font;
 
-    ctx.translate(10, height - 10); // margin: 10
-    ctx.rotate(- Math.PI / 12); // 15 degree
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'bottom';
+
+    ctx.translate(width * 0.1, height * 0.9); // margin: 10
+    ctx.rotate(-Math.PI / 12); // 15 degree
     ctx.fillText(text, 0, 0);
+
     return canvas.toDataURL();
   };
 });
