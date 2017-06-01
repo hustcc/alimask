@@ -45,8 +45,19 @@
   return function(text, options) {
     if (!canvas || !ctx) {
       // if not exist, then initial
-      canvas = document.createElement('canvas');
-      ctx = canvas.getContext('2d');
+      if (typeof document !== 'undefined') {
+        canvas = document.createElement('canvas');
+      } else {
+        /*
+          https://github.com/Automattic/node-canvas
+          npm install canvas --save
+          node-canvas 的安装过程实在是太繁琐了，所以不放入 package.json 的 dependencies。
+         */
+        var Canvas = module.require('canvas');
+        canvas = new Canvas();
+      }
+      ctx = canvas && canvas.getContext && canvas.getContext('2d');
+      if (!canvas || !ctx) return ''; // if not exist also, then return blank.
     }
     options = mergeOptions(options);
     var width = options.width, 
